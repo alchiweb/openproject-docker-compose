@@ -80,7 +80,7 @@ services:
       retries: 3
       start_period: 30s
     volumes:
-      - './openproject/:/app/app/models/enterprise_token.rb:ro'
+      - "/var/openproject/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro'
   autoheal:
     image: willfarrell/autoheal:1.2.0
     volumes:
