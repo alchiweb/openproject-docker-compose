@@ -5,7 +5,6 @@ networks:
 volumes:
   pgdata:
   opdata:
-  openproject/enterprise_token.rb:
   
 x-op-restart-policy: &restart_policy
   restart: unless-stopped
@@ -80,7 +79,7 @@ services:
       retries: 3
       start_period: 30s
     volumes:
-      - openproject/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro
+      - ./openproject/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro
 
   autoheal:
     image: willfarrell/autoheal:1.2.0
