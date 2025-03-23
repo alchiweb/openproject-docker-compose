@@ -78,6 +78,8 @@ services:
       timeout: 3s
       retries: 3
       start_period: 30s
+    volumes:
+      - /mnt/data/openproject/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro
 
   autoheal:
     image: willfarrell/autoheal:1.2.0
