@@ -5,7 +5,8 @@ networks:
 volumes:
   pgdata:
   opdata:
-
+  openproject/enterprise_token.rb:
+  
 x-op-restart-policy: &restart_policy
   restart: unless-stopped
 x-op-image: &image
@@ -116,5 +117,3 @@ services:
     restart: on-failure
     networks:
       - backend
-volumes:
-    openproject/enterprise_token.rb:
